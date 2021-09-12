@@ -1,0 +1,123 @@
+:root {
+    --primary: #3371F2;
+    --secondary: #90ACF7;
+    --gray: #333333;
+    --disable: #CCCCCC;
+    --lighting: #fff;
+}
+
+
+/* ------------------------
+ *       Content
+  ------------------------- */
+
+main {
+    margin-top: 54px;
+}
+
+.title h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 64px;
+}
+
+.navegation {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1232px;
+    margin-bottom: 54px;
+}
+
+.navegation ul {
+    display: flex;
+    padding: 0;
+    justify-content: center;
+    gap: 64px;
+}
+
+.navegation__item {
+    list-style: none;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    color: var(--disable);
+}
+
+.navegation__item.active {
+    color: var(--primary);
+    padding-bottom: 14px;
+    border-bottom: 4px solid var(--primary);
+}
+
+.content {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1232px;
+}
+
+.content__container {
+    display: grid;
+    grid-template: repeat(2, 400px) / repeat(3, 3fr);
+    grid-template-areas: "one two three" "one four four";
+    grid-gap: 16px;
+}
+
+.box {
+    background: var(--secondary);
+    border-radius: 21.16px;
+}
+
+.box:nth-of-type(1) {
+    grid-area: one;
+}
+.box:nth-of-type(2) {
+    grid-area: two;
+    background: var(--primary);
+}
+.box:nth-of-type(3) {
+    grid-area: three;
+}
+.box:nth-of-type(4) {
+    grid-area: four;
+}
+
+
+.box__content {
+    display: flex;
+    flex-direction: column;
+    margin-top: 140px;
+    padding-left: 40px;
+    margin-bottom: 40px;
+    color: var(--lighting);
+}
+
+.box__content p {
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 300;
+    opacity: .6;
+    margin: 0;
+}
+
+.box__content h4 {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 32px;
+    margin: 0;
+    margin-top: 18px;
+    margin-bottom: 40px;
+    max-width: 291px;
+}
+
+.read-more {
+    display: flex;
+    align-items: center;
+}
+
+.read-more span {
+    font-size: 16px;
+    line-height: 150%;
+    padding-right: 19px;
+}
